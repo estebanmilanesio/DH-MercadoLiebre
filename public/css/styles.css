@@ -1,6 +1,5 @@
 /*VARIABLES*/
 
-
 :root {
     --Amarillo: #EAC926;
     --Azul: #03264C;
@@ -9,6 +8,8 @@
     --GrisClaro: #ebebeb;
     --Verde: #39b54a;
 }
+
+/*---------------------------------------------- MOBILE -------------------------------------------*/
 
 * {
     font-family: "Roboto", sans-serif;
@@ -19,52 +20,55 @@
        
 }
 
-body {
-    margin: 0;
-    background-color: #ebebeb;
-}
-
 article {
     margin-top: 30px;
     margin-bottom: 1px;
     background-color: white;
 }
 
-
-
-footer p,h6 {
-    margin: 5px 0
+body {
+    margin: 0;
+    background-color: #ebebeb;
 }
 
-footer p {
+body .tituloregistro{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 50%;
+}
+
+body .tituloregistro h2 {
     font-size: 18px;
 }
 
-
-h6 {
-    font-size: 24px;
+body .listadoregistro {
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: solid #101215;
+    font-size: 12px;
+    width: 50%;
+    background-color:rgb(100 100 100 / 24%);
+    border-radius: 25px;
 }
 
-header {
-    background-color: var(--Amarillo);
-}
-
-header ul{
-    padding-inline-start: 5px
-}
-
-header ul li{
-    list-style-type: none;
-    margin: 0;
-}
-
-header ul li a{
-    text-decoration: none;
-    color: #000;
+body .listadologin {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 40px;;
 }
 
 
-
+body .camposformulario {
+    padding: 5px;
+    margin: 0 auto;
+    border:#666
+}
 
 div.burger-menu{
     text-align: center;
@@ -79,6 +83,19 @@ div.burger-menu i{
     padding: 10px 3px;
     width: 40px;
     text-align: center;
+    transition: all, 450ms;
+}
+
+div.burger-menu i:hover {
+    background-color: var(--Azul)
+}
+
+footer p,h6 {
+    margin: 5px 0
+}
+
+footer p {
+    font-size: 18px;
 }
 
 footer div p {
@@ -86,15 +103,43 @@ footer div p {
     margin-right: 10px;
 }
 
+h6 {
+    font-size: 24px;
+}
+
+header {
+    background-color: var(--Amarillo);
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+header .logoycomprar {
+    display:flex;
+    justify-content: space-between;
+}
+
 main {
     margin: auto;
     width: 90%;
 }
 
+main h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 7px;
+}
+
 
 main section div {
     padding: 7px;
-    background-color: white;
+    /*background-color: white;*/
 }
 
 
@@ -111,6 +156,10 @@ main section div i{
     right: 20px;
     top: -15px;
    }
+
+main section div:hover .descripciones{
+    opacity: 100%;;
+}
    
 section div.topicos{
     border-top: 1px solid #ebebeb;
@@ -124,17 +173,43 @@ section div.topicos{
 
 
 
-
-
-
 .barra{
     background-color: #FFF;
     border: 1px solid #000;
     outline: none;
     color: #666;
     padding: 2px;
-    width: 50%;
+    width: 48%;
+    margin-right: 2px;
     padding: 5px;
+}
+
+.barraSuperior2 i{
+    margin: 5px;
+}
+
+.botonenviar input{
+    background-color: var(--Celeste);
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.botonreset input{
+    background-color: var(--Celeste);
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+
+.botonenviar input:hover{
+    background-color: var(--Azul) ;
+}
+
+.botonreset input:hover{
+    background-color: var(--Azul) ;
 }
 
 .cabecera {
@@ -144,11 +219,18 @@ section div.topicos{
 
 }
 
+.cajacelesteregistro{
+    height: 30%;
+    background-color: black;
+    padding: 2%;
+    border:black;
+}
+
 .descuentos {
-    margin-left: 10px;
     font-size: 16px;
     color: var(--Verde);
     width: 30%;
+    text-align: center;
 }
 
 .descripciones{
@@ -158,19 +240,6 @@ section div.topicos{
     /*color: #000;*/
     transition: all, 700ms
 }
-
-main section div:hover .descripciones{
-    opacity: 100%;;
-}
-
-
-.padre:hover {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    font-size: 16px;
-    transition: all, 700ms
-}
-
-
 
 .fa-truck {
     color: var(--Verde);
@@ -187,7 +256,8 @@ main section div:hover .descripciones{
 
 .flexibles {
     display: flex;
-    justify-content:flex-start;
+    width: 100%;
+    justify-content:space-between;
     align-items: center;
 }
 
@@ -203,6 +273,25 @@ main section div:hover .descripciones{
     margin-top: 20px;
 }
 
+.footer-icon h6 {
+    font-size: 18px;
+}
+
+.footer-icon p {
+    font-size: 12px;
+}
+
+.fotodeusuario{
+    border-collapse: collapse;
+}
+
+header nav ul li {
+    display: none;
+}
+
+.ingresodato{
+    margin-bottom: 3%;
+}
 
 .logo {
     width: 50%;
@@ -211,27 +300,40 @@ main section div:hover .descripciones{
     padding: 10px;
 }
 
+.logoregister {
+    width: 150px;
+}
+
 .manito-dolar {
     text-align: center;
     padding: 7px;
     width: 100vw;
 }
 
-header nav ul li {
-    display: none;
+.manito-dolar i{
+    margin: 5px;
+}
+
+.nombreYApellido{
+    margin-top: 10px;
+}
+
+.padre {
+    background-color: white;
+    width: 100%;
+    font-size: 16px;
+    margin: 5px;
+    box-sizing: border-box;
+    transition: all, 700ms
+}
+
+.padre:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 .precio {
     font-size: 18px;
     width: 70%;
-}
-
-
-
-
-
-.logoregister {
-    width: 150px;
 }
 
 .top-header-register {
@@ -240,17 +342,6 @@ header nav ul li {
     height: 90px;
 }
 
-body .listadoregistro {
-    text-align: center;
-    display:flex;
-    flex-direction: column;
-    margin: 0 auto;
-    border: solid #101215;
-    font-size: 12px;
-    width: 50%;
-    background-color:rgb(234, 246, 167);
-    border-radius: 25px;
-}
 
 .titulo{
     text-align: center;
@@ -258,78 +349,9 @@ body .listadoregistro {
 }
 
 
-body .listadologin {
-    display:flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 40px;;
-}
-
-body div {
-    padding:5px;
-}
-
-body .camposformulario {
-    padding: 5px;
-    margin: 0 auto;
-    border:#666
-}
-
-.cajacelesteregistro{
-    height: 30%;
-    background-color: rgb(12, 9, 9);
-    color: #0044AA;
-    padding: 2%;
-    margin-top: 2%;
-    border: rgb(41, 39, 39);
-}
-
-body .tituloregistro{
-    margin-left:auto;
-    margin-right:auto;
-    margin-top: 40px;
-    margin-bottom: 60px;
-    width: 50%;
-}
-header .logoycomprar {
-    display:flex;
-    justify-content: space-between;
-}
-
-.ingresodato{
-    margin-bottom: 3%;
-}
-
-.fotodeusuario{
-    border-collapse: collapse;
-}
-
-.botonenviar input{
-    background-color: var(--Celeste);
-    width: 300px;
-    height: 30px;
-    border-radius: 10px;
-}
-
-.botonreset input{
-    background-color: var(--Celeste);
-    width: 300px;
-    height: 30px;
-    border-radius: 10px;
-
-}
-
-.botonenviar input:hover{
-    background-color: var(--Azul) ;
-}
-
-.botonreset input:hover{
-    background-color: var(--Azul) ;
-}
 
 
-
-
+/*---------------------------------------------- TABLET -------------------------------------------*/
 
 
 
@@ -344,12 +366,16 @@ header .logoycomprar {
         display: block;
     }
 
-    li .barraSuperior1 {
-        margin: 10px;
+    .barraSuperior1 li {
+        margin: 5px;
+        width: 100%;
+        word-wrap: break-word;
     }
 
-    li .barraSuperior2 {
-        margin: 10px;
+    .barraSuperior2 li {
+        margin: 5px;
+        width: 100%;
+        word-wrap: break-word;
     }
 
 
@@ -367,12 +393,14 @@ header .logoycomprar {
     .barraSuperior1{
         display: flex;
         justify-content: space-between;
+        flex-wrap: nowrap;
         width: 33.33%;
         margin: 10px;
     }
 
     .barraSuperior2{
         display: flex;
+        flex-wrap: nowrap;
         justify-content: space-between;
         width: 33.33%;
         margin: 10px;
@@ -388,22 +416,20 @@ header .logoycomprar {
         display: flex;
         flex-wrap: nowrap;
         align-items: center;
+        justify-content: space-between;
+        margin-right: 5px;
+        margin-left: 5px;
     }
-
-  /*  .descripciones {
-        display: block; /*Anula lo que hicimos en el .descripciones
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        font-size: 16px;
-    }    */
    
 
     .lastVisit {
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
 
-    .lastVisit div {
-        width: 50%;
+    .lastVisit .padre {
+        width: 45%;
     }
 
 
@@ -424,6 +450,14 @@ header .logoycomprar {
 }
 
 
+
+
+
+
+
+/*---------------------------------------------- DESKTOP -------------------------------------------*/
+
+
 @media (min-width: 769px){
 
     .descripciones {
@@ -439,11 +473,12 @@ header .logoycomprar {
 
     .lastVisit {
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
 
-    .lastVisit div {
-        width: 25%;
+    .lastVisit .padre {
+        width: 23%;
     }
 
     .pie{
